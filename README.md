@@ -1,6 +1,6 @@
-# Mailer Queue
+# Mail Queue
 
-The mailer tool sends __bulk emails using mailgun__ in a controlled manner using the __prefetch__ and __delay__ configurations, prefetch is the number of emails send concurrently in a single time while the delay is the interval in seconds between prefetches.
+A mailer tool that sends __bulk emails using mailgun__ in a controlled manner using the __prefetch__ and __delay__ configurations, prefetch is the number of emails send concurrently in a single time while the delay is the interval in seconds between prefetches.
 
 ## Usage
 
