@@ -17,6 +17,7 @@ function mailer(emails, prefetch, delay, callback) {
   queue.on('dispatch', data => {
     forEach(data.dispatched, email => {
       debug(`dispatching email subject ${email.subject} to ${email.to} from ${email.from}`);
+
       mailer.messages().send(email, err => {
         if (err) {
           debug(`status: ${err.statusCode}, message: ${err.message}`);
@@ -28,7 +29,7 @@ function mailer(emails, prefetch, delay, callback) {
 
   queue.on('done', () => {
     if (typeof callback === 'function') {
-      callback((error.length < 0 ? undefined : error));
+      callback((error.length === 0 ? undefined : error));
     }
   });
 
