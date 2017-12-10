@@ -4,7 +4,7 @@
   "description": "mail client with simple in-memory queueing",
   "main": "index.js",
   "scripts": {
-    "test": "xo && ava",
+    "test": "xo && nyc ava",
     "np": "np"
   },
   "repository": {
